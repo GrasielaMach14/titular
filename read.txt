@@ -1,0 +1,20 @@
+Para adicionar dados na aplicação
+
+-> Terminal: php -a (shell interativo)
+
+-> require 'models\...';
+
+->criar obj, ex: $func = new Funcionario('','',...);
+
+->Para executar esta aplicação use Ctrl + Alt + N
+
+->Para acessar na Web usando servidor:
+
+O próprio PHP nos traz um servidor web integrado (built-in web server). Como a documentação diz, esse não é um servidor 
+para ser rodado em ambiente de produção, mas apenas para fazermos testes, executarmos alguns comandos, verificarmos se 
+a nossa aplicação está funcionando e, depois, a mandarmos para um servidor mais robusto e que trate de questões 
+importantes relacionadas à performance.
+Segue o link: https://www.php.net/manual/en/features.commandline.webserver.php
+
+Para subir o servidor: php -S localhost:8000
+

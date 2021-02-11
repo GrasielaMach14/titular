@@ -1,23 +1,30 @@
 <?php
 
-class CPF {
+namespace pooPhp\phpOo\Modelo;
+
+/* Não permite que a classe extenda para outras usando o final */
+
+final class CPF
+{
     private $numero;
 
-    public function __construct(string $numero) {
+    public function __construct(string $numero)
+    {
         $numero = filter_var($numero, FILTER_VALIDATE_REGEXP, [
             'options' => [
                 'regexp' => '/^[0-9]{3}\.[0-9]{3}\.[0-9]{3}\-[0-9]{2}$/'
             ]
         ]);
 
-        if($numero === false) {
-            echo 'Cpf innválido.';
+        if ($numero === false) {
+            echo 'Cpf inválido.';
         }
 
         $this->numero = $numero;
     }
 
-    public function recuperarNumero() : string {
+    public function recuperarNumero(): string
+    {
         return $this->numero;
     }
 }
